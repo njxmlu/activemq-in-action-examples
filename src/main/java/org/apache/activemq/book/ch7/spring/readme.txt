@@ -1,0 +1,2 @@
+使用Spring来发送消息，最普遍的方式是实现MessageCreator接口来创建消息，
+然后再通过JmsTemplate类的 send()发送消息
