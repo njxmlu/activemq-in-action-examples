@@ -1,0 +1,3 @@
+- Broker.java 演示了通过BrokerService类开启broker 
+- Factory.java 演示了通过BrokerFactory类+配置文件开启broker
+- XBeanBroker.java 演示了通过FileSystemXmlApplicationContext对象开启Broker
