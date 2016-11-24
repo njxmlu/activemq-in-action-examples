@@ -16,7 +16,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
  */
 public class Consumer {
 	//指定代理的url
-    private static String brokerURL = "tcp://localhost:61616";
+    private static String brokerURL = "tcp://127.0.0.1:61616";
     private static transient ConnectionFactory factory;
     private transient Connection connection;
     private transient Session session;

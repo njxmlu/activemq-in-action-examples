@@ -1,4 +1,9 @@
-<beans>
+<beans xmlns="http://xbean.apache.org/schemas/spring/1.0"
+	xmlns:amq="http://activemq.apache.org/schema/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xbean.apache.org/schemas/spring/1.0 classpath:/org/apache/xbean/spring/spring-beans.xsd
+  http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
+
 	<bean id="broker"
 		class="org.apache.activemq.xbean.BrokerFactoryBean">
 		<property name="config"

@@ -18,7 +18,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
  */
 public class Publisher {
 	//指定代理的url
-    private static String brokerURL = "tcp://localhost:61616";
+    private static String brokerURL = "tcp://192.168.182.128:61616";
     private static transient ConnectionFactory factory;
     private transient Connection connection; 
     private transient Session session;
@@ -34,7 +34,8 @@ public class Publisher {
     	//创建连接工厂
     	factory = new ActiveMQConnectionFactory(brokerURL);
     	//创建连接
-    	connection = factory.createConnection();
+//    	connection = factory.createConnection();
+    	connection = factory.createConnection("admin", "password");
     	//开始连接
         connection.start();
         //通过连接创建会话对象

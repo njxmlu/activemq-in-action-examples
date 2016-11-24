@@ -19,7 +19,7 @@ import javax.xml.stream.XMLStreamWriter;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQTextMessage;
 /**
- * 同ch8中Publisher代码一模一样 
+ * 同ch8中Publisher代码一模一样   
  */
 public class Publisher {
 

@@ -5,6 +5,8 @@ import org.apache.xbean.spring.context.FileSystemXmlApplicationContext;
 /**
  * 通过配置文件启动broker
  * args: src/main/resources/org/apache/activemq/book/ch7/spring-1.0.xml
+ *   或        src/main/resources/org/apache/activemq/book/ch2/activemq.xml
+ *   	 src/main/resources/org/apache/activemq/book/ch4/brokerA.xml
  */
 public class BrokerFactoryBeanExample {
 

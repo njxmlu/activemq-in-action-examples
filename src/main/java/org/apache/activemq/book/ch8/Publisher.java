@@ -5,6 +5,7 @@ import java.util.Hashtable;
 import java.util.Map;
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
+import javax.jms.DeliveryMode;
 import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -41,6 +42,7 @@ public class Publisher {
         connection.start();
         session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         producer = session.createProducer(null);
+        producer.setDeliveryMode(DeliveryMode.PERSISTENT); 
     }
     
     public void close() throws JMSException {
@@ -51,7 +53,7 @@ public class Publisher {
     
     public static void main(String[] args) throws JMSException, XMLStreamException {
     	Publisher publisher = new Publisher();
-        while (total < 1000) {
+        while (total < 100) {
             for (int i = 0; i < count; i++) {
                 publisher.sendMessage(args);
             }

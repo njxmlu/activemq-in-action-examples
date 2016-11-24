@@ -85,20 +85,20 @@ public class Publisher {
      * @throws JMSException
      */
     protected void sendMessage(String[] stocks) throws JMSException {
-        int idx = 0;
-        /*
+        /*int idx = 0;
+        
          * 因为有多个topic，随机选择消息要发送至的topic
-         */
+         
         while (true) {
             idx = (int)Math.round(stocks.length * Math.random());
             if (idx < stocks.length) {
                 break;
             }
         }
-        String stock = stocks[idx];
-        Destination destination = session.createTopic("STOCKS." + stock);
+        String stock = stocks[idx];*/
+        Destination destination = session.createTopic("TEST.TOPIC");
         //获取一条信息
-        Message message = createStockMessage(stock, session);
+        Message message = createStockMessage("TEST.TOPIC", session);
         System.out.println("Sending: " + ((ActiveMQMapMessage)message).getContentMap() + " on destination: " + destination);
         //发送消息
         producer.send(destination, message);

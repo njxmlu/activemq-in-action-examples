@@ -23,5 +23,7 @@ public class MemoryStoreEmbeddedBroker {
 
         //开启代理
         broker.start();
+        
+        System.out.println("broker启动成功");
       }
 }
